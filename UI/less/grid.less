@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10rem 8rem auto;
+}
+
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.header {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.timer {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.rich-text-editor {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 3;
+  grid-row-end: -1;
+}
