@@ -1,10 +1,11 @@
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 10rem 8rem auto;
+  grid-template-rows: 10rem 4.5rem auto;
 }
 
 .sidebar {
+  // grid-area: 1 / 1 / -1 / 4;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -12,6 +13,7 @@ body {
 }
 
 .header {
+  // grid-area: 1 / 4 / 2 / -1;
   grid-column-start: 4;
   grid-column-end: -1;
   grid-row-start: 1;
@@ -19,6 +21,7 @@ body {
 }
 
 .timer {
+  // grid-area: 2 / 4 / 3 / -1;
   grid-column-start: 4;
   grid-column-end: -1;
   grid-row-start: 2;
@@ -26,6 +29,7 @@ body {
 }
 
 .rich-text-editor {
+  // grid-area: 3 / 4 / -1 / -1;
   grid-column-start: 4;
   grid-column-end: -1;
   grid-row-start: 3;

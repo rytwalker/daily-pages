@@ -1,9 +1,9 @@
-const sidebarShrinkBtn = document.querySelector('.sidebar-toggle');
+const sidebarShrinkBtn = document.querySelector('.sidebar--toggle');
 const sidebar = document.querySelector('.sidebar');
 const header = document.querySelector('.header');
 const timer = document.querySelector('.timer');
 const richTextEditor = document.querySelector('.rich-text-editor');
-const sidebarList = document.querySelector('.nav__sidebar--list');
+const sidebarList = document.querySelector('.sidebar__list');
 
 sidebarShrinkBtn.addEventListener('click', () => {
   if (sidebarShrinkBtn.classList.contains('shrink')) {
