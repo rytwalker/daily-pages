@@ -14,16 +14,16 @@ sidebarShrinkBtn.addEventListener('click', () => {
     header.style.gridColumnStart = '2';
     timer.style.gridColumnStart = '2';
     richTextEditor.style.gridColumnStart = '2';
-    sidebarList.style.animation = 'fadeout 500ms ease-in-out forwards';
+    sidebarList.style.animation = 'fadeout 300ms ease-in-out forwards ';
   } else if (sidebarShrinkBtn.classList.contains('grow')) {
     sidebarShrinkBtn.classList.add('shrink');
     sidebarShrinkBtn.classList.remove('grow');
-    sidebarShrinkBtn.style.transform = 'rotate(-180deg)';
-    sidebar.style.gridColumnEnd = '4';
-    header.style.gridColumnStart = '4';
-    timer.style.gridColumnStart = '4';
-    richTextEditor.style.gridColumnStart = '4';
-    sidebarList.style.animation = 'fadein 500ms ease-in-out forwards';
+    sidebarShrinkBtn.style.transform = 'rotate(0)';
+    sidebar.style.gridColumnEnd = '3';
+    header.style.gridColumnStart = '3';
+    timer.style.gridColumnStart = '3';
+    richTextEditor.style.gridColumnStart = '3';
+    sidebarList.style.animation = 'fadein 500ms ease-in-out 200ms backwards ';
   }
 });
 

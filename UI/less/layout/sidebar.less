@@ -1,15 +1,19 @@
 .sidebar {
   border-right: 1px solid #dddfe6;
   opacity: 1;
+  text-align: center;
 
   &__header {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__heading {
-    text-align: center;
     font-weight: 300;
     font-size: 2.2rem;
     margin: 0;
@@ -26,14 +30,9 @@
   }
 
   &--toggle {
-    position: fixed;
-    top: 5.5rem;
-    left: 5.5rem;
-    transition: transform 300ms ease-in-out;
+    margin-bottom: 0.5rem;
+    color: #dddfe6;
+    transition: transform 500ms ease-in-out;
     cursor: pointer;
-
-    &:hover {
-      transform: rotate(180deg);
-    }
   }
 }
