@@ -26,3 +26,26 @@ sidebarShrinkBtn.addEventListener('click', () => {
     sidebarList.style.animation = 'fadein 500ms ease-in-out forwards';
   }
 });
+
+// DROPDOWN MENU
+function dropdownToggle() {
+  document.getElementById('userDropdown').classList.toggle('show');
+}
+
+document
+  .querySelector('.dropdown__link')
+  .addEventListener('click', dropdownToggle);
+
+// Close the dropdown menu if the user clicks outside of it
+window.addEventListener('click', e => {
+  if (!e.target.matches('.dropdown__link')) {
+    const dropdowns = Array.from(
+      document.querySelectorAll('.dropdown__content')
+    );
+    dropdowns.forEach(dropdown => {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    });
+  }
+});
