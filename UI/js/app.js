@@ -7,15 +7,18 @@ const sidebarList = document.querySelector('.sidebar__list');
 
 sidebarShrinkBtn.addEventListener('click', () => {
   if (sidebarShrinkBtn.classList.contains('shrink')) {
-    sidebarShrinkBtn.classList.remove('shrink');
-    sidebarShrinkBtn.classList.add('grow');
-    sidebarShrinkBtn.style.transform = 'rotate(180deg)';
-    sidebar.style.gridColumnEnd = '2';
-    header.style.gridColumnStart = '2';
-    timer.style.gridColumnStart = '2';
-    richTextEditor.style.gridColumnStart = '2';
     sidebarList.style.animation = 'fadeout 300ms ease-in-out forwards ';
+    setTimeout(() => {
+      sidebarShrinkBtn.classList.remove('shrink');
+      sidebarShrinkBtn.classList.add('grow');
+      sidebarShrinkBtn.style.transform = 'rotate(180deg)';
+      sidebar.style.gridColumnEnd = '2';
+      header.style.gridColumnStart = '2';
+      timer.style.gridColumnStart = '2';
+      richTextEditor.style.gridColumnStart = '2';
+    }, 500);
   } else if (sidebarShrinkBtn.classList.contains('grow')) {
+    sidebarList.style.animation = 'fadein 500ms ease-in-out 200ms backwards ';
     sidebarShrinkBtn.classList.add('shrink');
     sidebarShrinkBtn.classList.remove('grow');
     sidebarShrinkBtn.style.transform = 'rotate(0)';
@@ -23,7 +26,6 @@ sidebarShrinkBtn.addEventListener('click', () => {
     header.style.gridColumnStart = '3';
     timer.style.gridColumnStart = '3';
     richTextEditor.style.gridColumnStart = '3';
-    sidebarList.style.animation = 'fadein 500ms ease-in-out 200ms backwards ';
   }
 });
 
